@@ -19,7 +19,7 @@ function Copyright(props) {
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://www.eminds.ai/">
-      Em Product Store Sample project
+      Em Product Store Sample project by BhanuBandi
       </Link>{' '}
       
       {'.'}
