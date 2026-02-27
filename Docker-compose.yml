@@ -1,3 +1,5 @@
+version: "3.8"
+
 services:
   backend:
     container_name: back-end-v2.0
@@ -19,16 +21,16 @@ services:
       - backend
 
   postgresql:
-    image: postgres
+    container_name: postgres-db
+    image: postgres:16
     ports:
       - "5432:5432"
     environment:
-      - POSTGRES_PASSWORD=root
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=productstore
-  volumes:
-      - ~/postgres_data:/var/lib/postgresql/data
+      POSTGRES_PASSWORD: root
+      POSTGRES_USER: postgres
+      POSTGRES_DB: productstore
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 
 volumes:
   postgres_data:
-      
